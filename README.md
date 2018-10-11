@@ -1,2 +1,2 @@
-# hackerfun
-a series of code challenge submissions
+# haX
+> Algorithms and Data Structures Challenge Submissions
