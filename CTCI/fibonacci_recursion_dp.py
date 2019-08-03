@@ -22,11 +22,20 @@ def f2(i, memo):
 
     return memo[i]
 
-print"Top down dp solution : ", (top_down_f(8))
+print("Top down dp solution : ", top_down_f(8))
 
 def bottom_up_f(i):
+    if i == 0:
+        return 0
+    if i == 1:
+        return 1
+
+    memo = [0] * (i+1)
     memo[0] = 0
     memo[1] = 1
-    memo[i] =
+    for i in range(2, i+1):
+        memo[i] = memo[i-1] + memo[i-2]
 
-print"Bottom up dp solution : ", (top_down_f(8))
+    return memo[i-1] + memo[i-2]
+
+print("Bottom up dp solution : ", bottom_up_f(8))
